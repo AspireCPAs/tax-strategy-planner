@@ -280,3 +280,22 @@ ul.notes li { margin-bottom: 6px; }
 #brand-logo-preview { max-height: 50px; max-width: 180px; margin-top: 8px; display: none; border-radius: 6px; }
 #brand-logo-preview.show { display: block; }
 .brand-actions { display: flex; gap: 10px; margin-top: 22px; }
+/* ---------------------------- header menu ---------------------------- */
+.menu-wrap { position: relative; }
+#menu-btn {
+  background: rgba(255,255,255,.08); color: #cbd5e1; border: 1px solid rgba(255,255,255,.18);
+  border-radius: 8px; width: 42px; height: 38px; font-size: 20px; line-height: 1;
+  cursor: pointer; transition: all .15s;
+}
+#menu-btn:hover { background: rgba(255,255,255,.16); color: #fff; }
+.menu-panel {
+  display: none; position: absolute; right: 0; top: 46px; z-index: 60; min-width: 190px;
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: var(--shadow-md); padding: 6px;
+}
+.menu-panel.open { display: block; }
+.menu-panel #brand-settings-btn {
+  display: block; width: 100%; text-align: left; background: transparent; color: var(--ink);
+  border: none; border-radius: 6px; padding: 10px 12px; font-size: 14px; font-family: inherit;
+}
+.menu-panel #brand-settings-btn:hover { background: var(--accent-soft); color: var(--ink); }
