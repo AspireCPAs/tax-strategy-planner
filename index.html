@@ -14,7 +14,12 @@
     <h1><span class="brand-name" id="brand-name-display">Your Firm</span> &middot; Tax Strategy Planner</h1>
     <div class="tagline">Baseline vs. strategy scenarios &middot; 2026 tax law (Rev. Proc. 2025-32 / OBBBA)</div>
   </div>
-  <button id="brand-settings-btn">Brand Settings</button>
+  <div class="menu-wrap">
+  <button id="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+  <div id="menu-panel" class="menu-panel">
+    <button id="brand-settings-btn">Brand Settings</button>
+  </div>
+</div>
 </header>
 
 <nav class="tab-bar">
@@ -330,5 +335,23 @@
 <script src="js/renderers/slideshow.js"></script>
 <script src="js/renderers/pitch-deck.js"></script>
 <script src="js/app.js"></script>
+  <script>
+(function () {
+  var btn = document.getElementById('menu-btn');
+  var panel = document.getElementById('menu-panel');
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function (e) {
+    if (!panel.contains(e.target)) {
+      panel.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+  panel.addEventListener('click', function () { panel.classList.remove('open'); });
+})();
+</script>
 </body>
 </html>
