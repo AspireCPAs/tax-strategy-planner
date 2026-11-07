@@ -5,12 +5,12 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink: #16202e;          /* deep navy — headers, primary text */
-  --ink-2: #2c3a4d;
+  --ink:  #003366;      /* Aspire navy: header, tab bar, primary buttons */
+  --ink-2: #0a4a80;    /* slightly lighter navy for the header gradient / hover */
   --muted: #64748b;
   --line: #e2e8f0;
   --line-soft: #eef2f6;
-  --accent: #8a6d3b;       /* themeable brand color */
+  --accent: #f5a800;   /* Aspire gold: active-tab underline, bars, badges */
   --accent-soft: color-mix(in srgb, var(--accent) 12%, white);
   --green: #15803d;
   --green-soft: #f0faf3;
